@@ -1,5 +1,7 @@
 .vscode/**
+.github/**
 src/**
+test/**
 .scratch/**
 node_modules/**
 out/**/*.map

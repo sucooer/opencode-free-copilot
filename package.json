@@ -58,6 +58,8 @@
     "compile": "node node_modules/typescript/bin/tsc -p ./",
     "watch": "node node_modules/typescript/bin/tsc -watch -p ./",
     "check": "node node_modules/typescript/bin/tsc --noEmit -p ./",
+    "test": "node test/run.js",
+    "package:vsix": "npx --yes @vscode/vsce package --allow-missing-repository",
     "vscode:prepublish": "npm run compile"
   },
   "devDependencies": {
