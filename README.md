@@ -9,12 +9,15 @@
 ```bash
 npm install
 npm run compile     # 产物在 out/
+npm run check       # 只做类型检查
+npm test            # 离线用例（协议解码、指纹形状、限流切换）
 ```
 
 - 开发：在 VS Code 里打开本目录，按 `F5`
-- 安装：`npx @vscode/vsce package` 后 `code --install-extension opencode-free-copilot-0.1.0.vsix`
+- 安装：`npm run package:vsix` 后 `code --install-extension opencode-free-copilot-0.2.0.vsix`
 
-要求 VS Code **1.109+**，并已安装 Copilot Chat。
+要求 VS Code **1.109+**，并已安装 Copilot Chat。推送与 PR 会跑 GitHub Actions（三平台构建 + 测试 + 打包，见
+`.github/workflows/ci.yml`）。
 
 ## 使用
 
