@@ -1,0 +1,68 @@
+{
+  "name": "opencode-free-copilot",
+  "displayName": "OpenCode Free Models",
+  "description": "把 OpenCode Zen 的免费模型直接接入 VS Code Copilot 模型选择器，无需本地网关。",
+  "version": "0.1.0",
+  "publisher": "local",
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.109.0"
+  },
+  "categories": [
+    "AI",
+    "Chat"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languageModelChatProviders": [
+      {
+        "vendor": "opencode-free",
+        "displayName": "OpenCode Free"
+      }
+    ],
+    "commands": [
+      {
+        "command": "opencodeFree.refreshModels",
+        "title": "刷新免费模型列表",
+        "category": "OpenCode Free"
+      },
+      {
+        "command": "opencodeFree.showLog",
+        "title": "查看日志",
+        "category": "OpenCode Free"
+      }
+    ],
+    "configuration": {
+      "title": "OpenCode Free",
+      "properties": {
+        "opencodeFree.baseUrl": {
+          "type": "string",
+          "default": "https://opencode.ai",
+          "description": "上游根地址，一般不用改。",
+          "scope": "application"
+        },
+        "opencodeFree.hideUnsupported": {
+          "type": "boolean",
+          "default": true,
+          "description": "隐藏当前实现尚不支持线路（messages / systemone）的模型。",
+          "scope": "application"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "node node_modules/typescript/bin/tsc -p ./",
+    "watch": "node node_modules/typescript/bin/tsc -watch -p ./",
+    "check": "node node_modules/typescript/bin/tsc --noEmit -p ./",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/vscode": "^1.109.0",
+    "typescript": "^5.7.0"
+  }
+}
