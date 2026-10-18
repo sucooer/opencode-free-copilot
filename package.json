@@ -2,7 +2,7 @@
   "name": "opencode-free-copilot",
   "displayName": "OpenCode Free Models",
   "description": "把 OpenCode Zen 的免费模型直接接入 VS Code Copilot 模型选择器，无需本地网关。",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "local",
   "license": "MIT",
   "icon": "images/icon.png",
