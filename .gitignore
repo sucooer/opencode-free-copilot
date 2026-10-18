@@ -1,0 +1,6 @@
+node_modules/
+out/
+.pkg/
+.scratch/
+*.vsix
+*.tsbuildinfo

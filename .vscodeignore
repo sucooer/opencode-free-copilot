@@ -1,0 +1,12 @@
+.vscode/**
+src/**
+.scratch/**
+node_modules/**
+out/**/*.map
+images/_render.html
+tsconfig.json
+**/*.ts
+!out/**/*.js
+.gitignore
+.npm-cache/**
+.pkg/**
